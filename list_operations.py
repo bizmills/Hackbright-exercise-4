@@ -141,23 +141,41 @@ def custom_insert(input_list, index, value):
 
 def custom_remove(input_list, value):
     """custom_remove(input_list, value) imitates input_list.remove(value)"""
-    pass
+    x = 0
+    for v in input_list:
+        if v == value:
+            del input_list[x]
+            return
+        x += 1
 
 def custom_pop(input_list):
     """custom_pop(input_list) imitates input_list.pop()"""
-    pass
+    weasel = input_list[-1]
+    del input_list[-1]
+    return weasel
 
 def custom_index(input_list, value):
     """custom_index(input_list, value) imitates input_list.index(value)"""
-    pass
+    x = 0
+    for v in input_list:
+        if v == value:
+            return x
+        x += 1
 
 def custom_count(input_list, value):
     """custom_count(input_list, value) imitates input_list.count(value)"""
-    pass
+    x = 0
+    value_count = 0
+    for v in input_list:
+        if v == value:
+            value_count += 1
+        x += 1
+    return value_count
 
 def custom_reverse(input_list):
     """custom_reverse(input_list) imitates input_list.reverse()"""
     pass
+
 
 def custom_contains(input_list, value):
     """custom_contains(input_list, value) imitates (value in input_list)"""
